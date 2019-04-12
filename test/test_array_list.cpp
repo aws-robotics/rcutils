@@ -48,7 +48,7 @@ protected:
   {
     ArrayListTest::SetUp();
     const rcutils_ret_t ret = rcutils_array_list_init(&list, 2, sizeof(uint32_t), &allocator);
-    EXPECT_EQ(RCUTILS_RET_OK, ret) << rcutils_get_error_string().str;
+    ASSERT_EQ(RCUTILS_RET_OK, ret) << rcutils_get_error_string().str;
     rcutils_reset_error();
   }
 
